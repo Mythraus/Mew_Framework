@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{$Title}</title>
+		<link rel="stylesheet" type="text/css" href="Styles/Index.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 id="titleIndex">Welcome to MewFramework!</h1>
+			<h3 id="minorTitle">What is MewFramework?</h3>
+			<p id="mainText">
+				MewFramework is basic PHP framework that is written using the Object Oriented Pattern, Mew allows for faster creation of small apps.<br/>
+				Mew uses PDO for database access, it comes pre setup for a mysql environment however it can be changed with the right knowledge, PDO was chosen because of it's
+				compatibility with multiple database drivers. <a href="http://php.net/manual/en/pdo.drivers.php">Link</a><br/>
+				Mew also uses <a href="http://www.raintpl.com/">RainTPL</a> for templating, this allows php and html to seperated allowing for easy code editing to both the template and the backend.</p>
+				<h3 id="minorTitle">It's easy to create pages with Mew</h3>
+				<p id="mainText">
+					All you have to do is create a php file with the name you want in the PAGES folder and it's good to go!<br/>
+					For instance you may want to make a page such as <a href="#">http://www.example.com/MyNewPage</a> all you have to do is create a file called &quot;MyNewPage.php&quot;
+					in the PAGES folder which can be found inside the APPLICATION folder!
+				</p>
+				<h3 id="minorTitle">Here's an example!</h3>
+				<pre>
+					<?php <br/>
+					    // We must use the $this variable to access our objects! <br/>
+					    $this->Views->Assign('Text', 'Blahblah');<br/>
+					    // This is to add a template to our file from the VIEWS<br/>
+					    // folder. So lets fetch hello.html from VIEWS <br/>
+					    $this->Views->Draw('hello');<br/>
+					    // And it's done all that you need to do is add logic <br/>
+					    // if you want! <br/>
+					?>
+				</pre>
+				<a href="{$Link}/Helpers"><h3 id="minorTitle">How do I use helpers?</h3></a>
+				<p id="mainText">Click the above title to find out! <a href="{$Link}/Helpers">Or here if you are lazy!</a></p>
+				<p style="color:#219E82;">{$Footer}</p>
+
+		</div>
+	</body>
+</html>

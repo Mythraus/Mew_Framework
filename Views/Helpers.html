@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{$Title}</title>
+		<link rel="stylesheet" type="text/css" href="Styles/Index.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 id="titleIndex">Helpers</h1>
+			<h3 id="minorTitle">What are helpers?</h3>
+			<p id="mainText">
+				Helpers are little addons to a page that you can make without actually having to edit the pages source, It isn't really tested yet but it should work</p>
+				<h3 id="minorTitle">Helper Example</h3>
+				<pre>
+					<?php <br/>
+					    // The class name must be the helpers class name in the <br/>
+					    //database<br/>
+					    class IndexHelper <br/>
+					    {
+					    /*<br/>
+					    *  Every helper must contain a Load function which<br/>
+					    *  must have a $Database variable and a $Description <br/>
+					    *  variable.<br/>
+					    */ <br/>
+					        public function Load($Database, $Description)<br/>
+					        { <br/>
+					            echo "Hello I help the index"; </br>
+					            $Database->query("INSERT INTO notes(note) VALUES('I have helped index')"); <br/>
+					            echo $Description; <br/>
+					            // And that's how easy it is! <br/>
+					        } <br/>
+					    } <br/>
+					?>
+				</pre>
+				<img src="http://i.imgur.com/G8oKDDj.png"/>
+				<p id="mainText"><a href="{$Link}">Back to the main page!</a></p>
+				<p style="color:#219E82;">{$Footer}</p>
+		</div>
+	</body>
+</html>
